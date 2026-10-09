@@ -16,7 +16,7 @@ import jakarta.persistence.Table;
 @Entity 
 @Table(name = "prioridades")
 public class Prioridad {
-    @Id 
+    @Id //LLAVE PRIMARIA
     @GeneratedValue (strategy = GenerationType.UUID)
     private UUID id;
     
@@ -27,7 +27,7 @@ public class Prioridad {
     private Integer nivel;
 
     @OneToMany (mappedBy = "prioridad")
-    @JsonManagedReference("reto_prioridad")
+    @JsonManagedReference("reto_prioridad") 
     private List<Reto> retos; 
 
     public Prioridad() {
