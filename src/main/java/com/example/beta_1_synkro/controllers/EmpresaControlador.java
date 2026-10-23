@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.beta_1_synkro.models.Empresa;
 import com.example.beta_1_synkro.models.Prioridad;
 import com.example.beta_1_synkro.services.ServicioEmpresa;
 import com.example.beta_1_synkro.services.ServicioPrioridad;
@@ -24,7 +25,7 @@ public class EmpresaControlador {
     //controlador para guardar
     @PostMapping 
     public ResponseEntity<?> guardarEmpresa(@RequestBody Empresa datos){
-        return ResponseEntity.status(HttpStatus.OK).body(servicio.guardarPrioridad(datos));
+        return ResponseEntity.status(HttpStatus.OK).body(servicio.guardarEmpresa(datos));
     }
     //controlador para buscar
     public ResponseEntity<?> buscar(){
